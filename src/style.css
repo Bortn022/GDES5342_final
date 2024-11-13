@@ -1,0 +1,33 @@
+/*<link rel="stylesheet" href="https://use.typekit.net/nkz4vjb.css">*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "ivymode", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p, a {
+  font-family: articulat-cf, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+  color: #433621;
+}
+
+a:hover {
+  color: #cabead;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #433621;
+    background-color: #e3dada;
+  }
+}
