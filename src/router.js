@@ -8,7 +8,14 @@ const router = createRouter({
         {
             path: '/home',
             name: 'Home',
-            component: Home
+            component: Home,
+            /*
+            children: [
+                {
+                    path: 'home/:id',
+                    name: 'projects'
+                }
+            ] */
         },
         {
             path: '/about',

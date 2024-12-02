@@ -7,29 +7,64 @@ import ProjectCard from "../components/projects/ProjectCard.vue";
 <template>
   <primary-template>
     <div class="hero">
-      <h1>Welcome to Cara's portfolio</h1>
+      <div class="hero-text">
+      <h1>Welcome</h1>
+      <p>to Cara's design portfolio</p>
+      </div>
     </div>
-    <project-card v-for="(project, index) in projectData.data"
-                  :key="index" :project-data="project"/>
+    <section class="project-layout">
+      <project-card v-for="(project, index) in projectData.data"
+                    :key="index" :project-data="project"/>
+    </section>
   </primary-template>
-
 </template>
 
 <style scoped>
-  .hero {
-    background-image: url("../assets/landing_hero.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    position: relative;
-    height: 20rem;
-    width: auto;
-  }
+.hero {
+  background-image: url("../assets/landing_hero.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  height: 20rem;
+  width: auto;
 
-  h1 {
-    padding-left: 4rem;
-    position: absolute;
-    top: 40%;
-    left: 5%;
+  .hero-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 0 0 10vw;
+    h1 {
+      font-size: 4rem;
+      margin: 0;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 0 0 0 1rem;
+    }
   }
+}
+section{
+  .project-layout {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+}
+
+/*media queries*/
+@media (width>1000px){
+  section{
+    .project-layout {
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-count: 2;
+      justify-content: center;
+
+    }
+  }
+}
+
 </style>

@@ -5,10 +5,13 @@
 <template>
   <body>
   <header>
-    <img class="logo" src="../../src/assets/cara_bortnem_logo.svg" alt="Cara Bortnem Logo">
+    <router-link :to="{ name: 'Home' }">
+      <img class="logo" src="../../src/assets/cara_bortnem_logo.svg" alt="Cara Bortnem Logo">
+    </router-link>
+
     <div class="nav-links">
-      <router-link :to="{ name: 'Home' }">Home</router-link>
-      <router-link :to="{ name: 'About' }">About Me</router-link>
+      <router-link :to="{ name: 'Home' }">HOME</router-link>
+      <router-link :to="{ name: 'About' }">ABOUT</router-link>
     </div>
   </header>
 
@@ -23,6 +26,7 @@
 </template>
 
 <style scoped>
+
 /*header styles*/
 header {
   display: flex;
@@ -33,14 +37,19 @@ header {
 
   a {
     padding: 0 1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  &.router-link-active {
+    font-weight: bold;
+    color: #cabead;
   }
 
   .logo {
     width: 8rem;
     height: auto;
     padding-bottom: .5rem;
-    margin-left: 3rem;
+    margin-left: 1rem;
   }
 
   .nav-links {
@@ -52,7 +61,9 @@ header {
 /*section styles*/
 
 /*footer styles*/
-
+footer {
+  border-top: #cabead 1px solid;
+}
 /*media queries*/
 @media (width>1000px) {
 
