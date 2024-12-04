@@ -23,8 +23,9 @@ defineProps({
 <style scoped>
   .tempcard {
     border: solid 1px #cabead;
-    height: 300px;
-    width: 300px;
+    aspect-ratio: 1/1;
+    min-width: 250px;
+    max-width: 40vw;
     display: flex;
   }
 
@@ -35,11 +36,10 @@ defineProps({
 
 
   /*media queries*/
-
-  @media (width>1000px) {
-    .main {
-
+  @media (width>700px) {
+    .tempcard {
+      min-width: 300px;
+      flex: calc(27%);
     }
   }
-
 </style>

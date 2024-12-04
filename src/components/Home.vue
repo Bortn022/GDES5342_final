@@ -51,18 +51,17 @@ section{
     justify-self: center;
     padding: 2rem 0;
     gap: 2rem;
+    margin: 0 10rem;
   }
 }
 
 /*media queries*/
-@media (width>1000px){
+@media (width>700px){
   section{
     .project-layout {
       flex-direction: row;
       flex-wrap: wrap;
-      column-count: 2;
       justify-content: center;
-
     }
   }
 }
