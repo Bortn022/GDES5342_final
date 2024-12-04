@@ -38,11 +38,11 @@ header {
   a {
     padding: 0 1rem;
     font-size: 1.1rem;
-  }
 
-  &.router-link-active {
-    font-weight: bold;
-    color: #cabead;
+    &.router-link-active {
+      font-weight: bold;
+      color: #cabead;
+    }
   }
 
   .logo {

@@ -14,7 +14,10 @@ import ProjectCard from "../components/projects/ProjectCard.vue";
     </div>
     <section class="project-layout">
       <project-card v-for="(project, index) in projectData.data"
-                    :key="index" :project-data="project"/>
+                    :key="index"
+                    :project-data="project"
+                    :project-img="project.project_img"
+      />
     </section>
   </primary-template>
 </template>
@@ -44,6 +47,7 @@ import ProjectCard from "../components/projects/ProjectCard.vue";
     }
   }
 }
+
 section{
   .project-layout {
     display: flex;
@@ -65,5 +69,4 @@ section{
     }
   }
 }
-
 </style>

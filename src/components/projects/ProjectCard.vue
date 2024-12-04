@@ -3,20 +3,26 @@ defineProps({
   projectData: {
     type: Object,
     required: true
-  }
+  },
+  projectImg: {
+    type: Object,
+    required: true
+  },
 })
 </script>
 
 <template>
     <div class="tempcard">
+      <router-link :to=" { name: 'ProjectDetails', params: { id: projectData.id } }">
       <div class="coverimg">
-        <!--    <img :src="'../path/to/img/'" + imageName = '.png'">-->
+       <img :src= "'../../../../src/assets/' + projectImg" alt="img"/>
       </div>
       <div class="info">
         <h4> {{ projectData.project_name }} </h4>
         <p> {{ projectData.project_description }} </p>
         <p> {{ projectData.project_date }} </p>
       </div>
+    </router-link>
     </div>
 </template>
 
@@ -26,13 +32,29 @@ defineProps({
     aspect-ratio: 1/1;
     min-width: 250px;
     max-width: 40vw;
-    display: flex;
+    position: relative;
+
+  }
+
+  .tempcard:hover .info {
+    opacity: 1;
+  }
+
+  .coverimg {
+    position: absolute;
+    img {
+      width: 100%;
+    }
   }
 
   .info {
-    margin: 1rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #e3dadacc;
   }
-
 
 
   /*media queries*/
