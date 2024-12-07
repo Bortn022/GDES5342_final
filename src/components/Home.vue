@@ -16,7 +16,7 @@ import ProjectCard from "../components/projects/ProjectCard.vue";
       <project-card v-for="(project, index) in projectData.data"
                     :key="index"
                     :project-data="project"
-                    :project-img="project.project_img"
+                    :project-thumbnail="project.project_thumbnail"
       />
     </section>
   </primary-template>

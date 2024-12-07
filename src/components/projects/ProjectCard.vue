@@ -4,7 +4,7 @@ defineProps({
     type: Object,
     required: true
   },
-  projectImg: {
+  projectThumbnail: {
     type: Object,
     required: true
   },
@@ -12,56 +12,74 @@ defineProps({
 </script>
 
 <template>
-    <div class="tempcard">
-      <router-link :to=" { name: 'ProjectDetails', params: { id: projectData.id } }">
+  <div class="tempcard">
+    <router-link :to=" { name: 'ProjectDetails', params: { id: projectData.id } }">
       <div class="coverimg">
-       <img :src= "'../../../../src/assets/' + projectImg" alt="img"/>
+        <img :src="'../../../../src/assets/' + projectThumbnail" alt="img"/>
       </div>
       <div class="info">
         <h4> {{ projectData.project_name }} </h4>
-        <p> {{ projectData.project_description }} </p>
-        <p> {{ projectData.project_date }} </p>
+        <p> {{ projectData.project_type }} </p>
+        <!--        <p> {{ projectData.project_date }} </p>-->
       </div>
     </router-link>
-    </div>
+  </div>
 </template>
 
 <style scoped>
-  .tempcard {
-    border: solid 1px #cabead;
-    aspect-ratio: 1/1;
-    min-width: 250px;
-    max-width: 40vw;
-    position: relative;
+h4 {
+  font-size: 1.4rem;
+  margin: 0.1rem;
+}
 
-  }
+p {
+  font-size: 1rem;
+  margin: 0;
+}
 
-  .tempcard:hover .info {
-    opacity: 1;
-  }
+a:hover {
+  color: currentColor;
+}
 
-  .coverimg {
-    position: absolute;
-    img {
-      width: 100%;
-    }
-  }
+.tempcard {
+  aspect-ratio: 1/1;
+  min-width: 250px;
+  max-width: 40vw;
+  position: relative;
+  border: solid 1px #cabead;
+}
 
-  .info {
-    position: absolute;
+.tempcard:hover .info {
+  opacity: 1;
+}
+
+.coverimg {
+  position: absolute;
+
+  img {
     width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #e3dadacc;
   }
+}
+
+.info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #e3dadad9;
+  transition: .5s ease;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
 
 
-  /*media queries*/
-  @media (width>700px) {
-    .tempcard {
-      min-width: 300px;
-      flex: calc(27%);
-    }
+/*media queries*/
+@media (width > 700px) {
+  .tempcard {
+    min-width: 300px;
+    flex: calc(27%);
   }
+}
 </style>

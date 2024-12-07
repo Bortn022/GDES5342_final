@@ -1,5 +1,4 @@
 <script setup>
-
 import PrimaryTemplate from "../../templates/PrimaryTemplate.vue";
 
 import {onMounted} from "vue";
@@ -18,16 +17,39 @@ onMounted(() => {
     })
   }
 })
+
+defineProps({
+  projectData: {
+    type: Object,
+    required: true
+  },
+  projectHero: {
+    type: Object,
+    required: true
+  },
+})
 </script>
 
 <template>
   <primary-template>
-    <h1>Project Details</h1>
-
-    <pre>{{ project }}</pre>
+    <section class="project-layout">
+      <img :src="'../../../../src/assets/' + projectHero" alt="img"/>
+        <p> {{ projectData.project_name }} </p>
+      <pre>{{ project }}</pre>
+    </section>
   </primary-template>
 </template>
 
 <style scoped>
-
+section{
+  .project-layout {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    padding: 2rem 0;
+    gap: 2rem;
+    margin: 0 10rem;
+  }
+  
+}
 </style>
