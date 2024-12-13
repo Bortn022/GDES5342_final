@@ -16,7 +16,6 @@ import ProjectCard from "../components/projects/ProjectCard.vue";
       <project-card v-for="(project, index) in projectData.data"
                     :key="index"
                     :project-data="project"
-                    :project-thumbnail="project.project_thumbnail"
       />
     </section>
   </primary-template>
@@ -38,11 +37,9 @@ import ProjectCard from "../components/projects/ProjectCard.vue";
     flex-direction: column;
     padding: 5rem 0 0 10vw;
     h1 {
-      font-size: 4rem;
       margin: 0;
     }
     p {
-      font-size: 1.2rem;
       margin: 0 0 0 1rem;
     }
   }

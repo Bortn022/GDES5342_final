@@ -17,31 +17,20 @@ onMounted(() => {
     })
   }
 })
-
-defineProps({
-  projectData: {
-    type: Object,
-    required: true
-  },
-  projectHero: {
-    type: Object,
-    required: true
-  },
-})
 </script>
 
 <template>
   <primary-template>
     <section class="project-layout">
-      <img :src="'../../../../src/assets/' + projectHero" alt="img"/>
-        <p> {{ projectData.project_name }} </p>
+      <img :src="'../../../../src/assets/' + project.hero" alt="hero img"/>
+        <p> {{ project.name }} </p>
       <pre>{{ project }}</pre>
     </section>
   </primary-template>
 </template>
 
 <style scoped>
-section{
+section {
   .project-layout {
     display: flex;
     flex-direction: column;

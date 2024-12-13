@@ -27,9 +27,29 @@ a:hover {
   color: #cabead;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #433621;
-    background-color: #e3dada;
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+@media (width>955px){
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1.4rem;
   }
 }
+
+:root {
+  color: #433621;
+  background-color: #e3dada;
+}
+
+/*@media (prefers-color-scheme: light) {
+
+}*/

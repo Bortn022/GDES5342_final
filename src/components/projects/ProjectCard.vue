@@ -3,11 +3,7 @@ defineProps({
   projectData: {
     type: Object,
     required: true
-  },
-  projectThumbnail: {
-    type: Object,
-    required: true
-  },
+  }
 })
 </script>
 
@@ -15,11 +11,11 @@ defineProps({
   <div class="tempcard">
     <router-link :to=" { name: 'ProjectDetails', params: { id: projectData.id } }">
       <div class="coverimg">
-        <img :src="'../../../../src/assets/' + projectThumbnail" alt="img"/>
+        <img :src="'../../../../src/assets/' + projectData.thumbnail" alt="img"/>
       </div>
       <div class="info">
-        <h4> {{ projectData.project_name }} </h4>
-        <p> {{ projectData.project_type }} </p>
+        <h4> {{ projectData.name }} </h4>
+        <p> {{ projectData.type }} </p>
         <!--        <p> {{ projectData.project_date }} </p>-->
       </div>
     </router-link>
