@@ -5,7 +5,8 @@ const data = [
         "date": "2023-12",
         "type": "packaging and display",
         "thumbnail": "claresca_thumbnail.png",
-        "hero": "claresca_hero.png",
+        "hero": "bosco_hero.png",
+        images: ["project2-slide1.jpg", "project2-slide2.jpg"],
     }, {
         "id": "rethinking",
         "name": "ReThinking",
@@ -13,6 +14,7 @@ const data = [
         "type": "a typographic experiment",
         "thumbnail": "rethinking_thumbnail.png",
         "hero": "rethinking_hero.png",
+        images: ["project2-slide1.jpg", "project2-slide2.jpg"],
     }, {
         "id": "bosco",
         "name": "Bosco",
@@ -20,6 +22,7 @@ const data = [
         "type": "packaging",
         "thumbnail": "bosco_thumbnail.png",
         "hero": "bosco_hero.png",
+        images: ["project2-slide1.jpg", "project2-slide2.jpg"],
     }, {
         "id": "relab",
         "name": "ReLab",
@@ -27,12 +30,15 @@ const data = [
         "type": "logo redesign",
         "thumbnail": "relab_thumbnail.png",
         "hero": "relab_hero.png",
+        images: ["project2-slide1.jpg", "project2-slide2.jpg"],
     }, {
         "id": "comingsoon",
         "name": "",
         "date": "2022-01",
-        "type": " ",
+        "type": "",
         "thumbnail": "comingsoon.png",
+        "hero": "comingsoon.png",
+        images: ["project2-slide1.jpg", "project2-slide2.jpg"],
     }]
 
 export default {data}

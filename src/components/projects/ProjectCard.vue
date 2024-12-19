@@ -14,9 +14,10 @@ defineProps({
         <img :src="'../../../../src/assets/' + projectData.thumbnail" alt="img"/>
       </div>
       <div class="info">
-        <h4> {{ projectData.name }} </h4>
-        <p> {{ projectData.type }} </p>
-        <!--        <p> {{ projectData.project_date }} </p>-->
+        <div class="title">
+          <h4> {{ projectData.name }} </h4>
+          <p> {{ projectData.type }} </p>
+        </div>
       </div>
     </router-link>
   </div>

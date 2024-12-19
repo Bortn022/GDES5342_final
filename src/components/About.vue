@@ -10,13 +10,14 @@ import PrimaryTemplate from "../templates/PrimaryTemplate.vue";
         <img src="../assets/portrait_photo.jpg" alt="Portrait of Cara"/>
       </div>
       <div class="about-me">
-        <h1>Hello!</h1>
+        <h2>Hello!</h2>
         <p>My name is Cara (pronounced car-uh). <br/>
             I’m a graphic design student with an interest in branding and packaging, but what excites me most are the
             opportunities that allow me to embrace a diversity of tasks. I’ve been a creative since I could hold a
             pencil, honed my design skills for six years, and have over two years of professional experience. My passion
             lies in collaborating to bring ideas to life and in learning from the opportunities that each creative
             endeavor brings.</p>
+        <h4>Let's be in touch!</h4>
       </div>
     </section>
   </primary-template>
@@ -24,12 +25,15 @@ import PrimaryTemplate from "../templates/PrimaryTemplate.vue";
 
 <style scoped>
 
+/* TODO: -make page responsive & reduce image size */
+
 section {
   .main {
     display: flex;
     justify-self: center;
     flex-direction: column;
     max-width: 70vw;
+    margin: 2rem 0;
 
     .portrait {
       img {
@@ -41,11 +45,13 @@ section {
     .about-me {
       display: flex;
       flex-wrap: wrap;
-      margin: 1rem;
+      padding: 1rem;
+      text-align: center;
+      justify-content: center;
+    }
 
-      h1 {
-        margin: 0;
-      }
+    p {
+      font-size: 1.1rem;
     }
   }
 }
@@ -54,19 +60,23 @@ section {
   section {
     .main {
       flex-direction: row;
-      flex-wrap: wrap;
+      align-items: center;
+      max-width: 80vw;
 
       .portrait {
-
         img {
-          flex: calc(40%);
+          width: 100%;
+          padding: 1rem 0;
         }
       }
 
       .about-me {
-        flex: calc(40%);
-        max-width: 20vw;
+        max-width: 40%;
+        text-align: left;
+        justify-content: flex-start;
+        margin-left: 1rem;
       }
+
     }
   }
 }

@@ -89,6 +89,8 @@ header {
 /*section styles*/
 
 /*footer styles*/
+
+/* TODO: make SVG color change on hover */
 footer {
   border-top: #cabead 1px solid;
   display: flex;
@@ -101,7 +103,5 @@ footer {
     color: #cabead;
   }
 }
-
-/*media queries*/
 
 </style>
