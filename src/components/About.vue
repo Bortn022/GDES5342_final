@@ -24,9 +24,6 @@ import PrimaryTemplate from "../templates/PrimaryTemplate.vue";
 </template>
 
 <style scoped>
-
-/* TODO: -make page responsive & reduce image size */
-
 section {
   .main {
     display: flex;
